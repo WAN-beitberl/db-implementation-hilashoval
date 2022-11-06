@@ -9,7 +9,7 @@ public class pr1{
         t1.InsertRow("Shalev", "mashiah");
         t1.InsertRow("hila", "shoval");
 
-        System.out.println(t1.getValue("name", 1));
+        System.out.println(t1.getValue("Name", 1));
         System.out.println(t1.getValue("last_name", 2));
         System.out.println(t1.getValue("name", 3));
 
