@@ -1,0 +1,45 @@
+public class pr1{
+
+    public static void main(String[] args){
+        
+        Table t1 = new Table();
+        
+        t1.InsertColumnNames("name","last_name");
+        t1.InsertRow("Israel", "Israeli");
+        t1.InsertRow("Shalev", "mashiah");
+        t1.InsertRow("hila", "shoval");
+
+        System.out.println(t1.getValue("name", 1));
+        System.out.println(t1.getValue("last_name", 2));
+        System.out.println(t1.getValue("name", 3));
+
+    }
+    }
+    
+    class Table
+    {
+        
+        public String[][] table = new String[20][2];
+        int Index = 1;
+        
+    
+        public void InsertRow(String first_name, String last_name)
+        {
+            table[Index][0] = first_name;
+            table[Index][1] = last_name;
+            Index++;
+        }
+
+        public void InsertColumnNames(String column1, String column2)
+        {
+            table[0][0] = column1;
+            table[0][1] = column2;
+        }
+    
+        public String getValue(String type_col, int row)
+        {
+            if(type_col.equals(table[0][0]))
+                return table[row][0];
+            return table[row][1];
+        }       
+    }
